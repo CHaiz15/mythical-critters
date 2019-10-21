@@ -1,4 +1,4 @@
-class Unicorn {
+  class Unicorn {
   constructor(name, color) {
     this.name = name;
     if (color === undefined){

@@ -1,29 +1,27 @@
 class Wizard {
   constructor(wizard) {
-      this.name = wizard.name;
-      this.isRested = true;
-      this.castSpell = 0;
-      if (wizard.bearded === false){
-      this.bearded = false;
-      } else {
+    this.name = wizard.name;
+    this.isRested = true;
+    this.castSpell = 0;
+    if (wizard.bearded === undefined){
       this.bearded = true;
+    } else {
+      this.bearded = wizard.bearded;
     }
   }
-    incantation(spell) {
-      return spell.toUpperCase();
+  incantation(string){
+    return string.toUpperCase();
   }
   cast() {
-    this.castSpell++;
-    if (this.castSpell >= 3) {
+    this.castSpell += 1;
+    if (this.castSpell >= 3){
       this.isRested = false;
-      return "I SHALL NOT CAST!";
+      return 'I SHALL NOT CAST!';
     } else {
-    return "MAGIC BULLET";
-  }
+      return 'MAGIC BULLET';
+    }
   }
 }
-
-
 
 
 module.exports = Wizard;
