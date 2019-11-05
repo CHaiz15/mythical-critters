@@ -24,4 +24,4 @@ class Wizard {
 }
 
 
-module.exports = Wizard;
+module.exports = Wizard;    
